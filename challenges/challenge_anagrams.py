@@ -1,21 +1,20 @@
 # src: https://wiki.python.org/moin/TimeComplexity#list
 
-def is_anagram(first_word, second_word):  # complex: O(n)
-    first_word = first_word.lower()
-    second_word = second_word.lower()
+def is_anagram(fst_word, snd_word):  # complex: O(n)
+    fst_word = fst_word.lower()
+    snd_word = snd_word.lower()
 
-    if (first_word == '' or second_word == ''):  # complex: O(1)
+    if (fst_word == '' or snd_word == ''):  # complex: O(1)
         return False
 
-    dupe_letter_idx = second_word.find(first_word[0])  # complex: O(n)
+    dupe_letter_idx = snd_word.find(fst_word[0])  # complex: O(n)
     if (dupe_letter_idx == -1):
         return False
 
-    first_word = first_word[1:]  # complex: O(n)
-    # complex L16 : O(n)
-    second_word = second_word[:dupe_letter_idx]+second_word[dupe_letter_idx + 1:]
+    fst_word = fst_word[1:]  # complex: O(n)
+    snd_word = snd_word[:dupe_letter_idx] + snd_word[dupe_letter_idx + 1:]
 
-    if (first_word == '' and second_word == ''):  # complex: O(1)
+    if (fst_word == '' and snd_word == ''):  # complex: O(1)
         return True
 
-    return is_anagram(first_word, second_word)
+    return is_anagram(fst_word, snd_word)
