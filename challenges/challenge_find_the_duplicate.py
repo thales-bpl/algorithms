@@ -3,7 +3,7 @@ def find_duplicate(array):
     n = len(array)
     any_dupe_number = False
     
-    for i in range(n - 1): # O(n - 1)
+    for i in range(n - 1):  # O(n - 1)
         if type(sorted_array[i]) == str or sorted_array[i] < 0:
             break
 

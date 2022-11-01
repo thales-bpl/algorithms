@@ -5,8 +5,8 @@ def is_palindrome_iterative(word):  # O(n/2)
         testing_index = -1
 
         if (word[index] == '' or
-            word[testing_index] == '' or
-            word[index] != word[testing_index]):
+                word[testing_index] == '' or
+                word[index] != word[testing_index]):
             return False
 
         testing_index -= 1
