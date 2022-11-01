@@ -10,7 +10,5 @@ def is_palindrome_iterative(word):  # O(n/2)
             return False
 
         testing_index -= 1
-        if (testing_index == -checkpoint):
-            break
         
     return True
