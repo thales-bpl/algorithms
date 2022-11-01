@@ -1,4 +1,7 @@
 def is_palindrome_iterative(word):  # O(n/2)
+    if (word == ''):
+        return False
+
     checkpoint = round(len(word)/2)
 
     for index in range(checkpoint):
